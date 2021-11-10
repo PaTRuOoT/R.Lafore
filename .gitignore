@@ -1,0 +1,6 @@
+# Exclude all files with extension .exe
+*.exe
+# Exclude all files with extension .json
+*.json
+# Exclude all files with extension .code-workspace
+*.code-workspace
