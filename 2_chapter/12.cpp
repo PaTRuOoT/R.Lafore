@@ -22,12 +22,12 @@ int main(int argc, char const *argv[])
     cout << "Enter the number of decimal pounds, J: ";
     double decpounds = 0.0; // decimal pounds
     cin >> decpounds;
-    double decfrac = 0.0; // десятичная дробная часть
-    int pounds = 0; // pounds
-    pounds = static_cast<int>(decpounds); // отбрасывание дробной части
-    decfrac = decpounds - pounds; // прибавление дробной части
-    cout << "Pounds, J: " << pounds << "." 
-        << std::setprecision(2); // установка точности 2 знака после запятой
-    //    << (shillings*12+pesso)*100/240 << endl;
+    int pounds, shhiling, pesso;
+    pounds = static_cast<int>(decpounds); // целая часть
+    shhiling = static_cast<int>((decpounds*240-pounds*240)/12); // целая часть от
+        // (всего пессо (фунты * 240) - целая часть фунтов * 240) / 12
+    // пессо = всего пессо - пессо фунтами - пессо шилингами
+    pesso = static_cast<int>((decpounds*240)-(pounds*240) - (shhiling*12)); 
+    cout << "Pounds, J: " << pounds << "." << shhiling << "." << pesso << endl;
     return 0;
 }
