@@ -12,9 +12,9 @@
 #include <ctype.h> // для ф-ции islower()
 
 int main () {
-    char a;
-    std::cout << "Enter a letter: ";
-    std::cin >> a;
-    std::cout << islower(a) << std::endl;
+    char a; // объявляем переменную
+    std::cout << "Enter a letter: "; // ввод данных с клавиатуры
+    std::cin >> a; 
+    std::cout << islower(a) << std::endl; // вывод информации
     return 0;
 }
